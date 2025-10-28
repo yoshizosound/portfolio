@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOSHITAKA OHNISHI | Portfolio</title>
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="css/fade.css">
+
+  <!-- ページ専用CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- HEROセクション -->
+  <section class="hero">
+
+    <!-- 左側 -->
+    <div class="left-side">
+      <div class="overlay">
+        <h1>YOSHITAKA OHNISHI</h1>
+        <p>Composer / Sound Design for Visual Media<br>
+           keyboardist</p>
+        <div class="page-links">
+          <a href="index.html">HOME</a><br>
+          <a href="#" id="aboutLink">ABOUT</a><br>
+          <a href="latestworks.html">MEDIA WORKS</a><br>
+          <a href="works.html">WORKS</a><br>
+          <a href="contact.html">CONTACT</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="side-footer">
+      <p>&copy; 2025 YOSHITAKA OHNISHI.All Rights Reserved.</p>
+
+      <!--
+      <div class="social-links">
+        <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+      </div>
+      -->
+    </footer>
+
+  </div>
+</div>
+
+
+    <!-- 右側 -->
+    <div class="right-side">
+      <!-- 背景動画 -->
+      <video id="bgVideo" autoplay loop muted playsinline>
+        <source src="assets/videos/top.mp4" type="video/mp4">
+      </video>
+
+      <!-- MUTEボタン -->
+      <button id="muteBtn">MUTE</button>
+
+      <!-- ABOUTポップアップ -->
+      <div class="about-popup" id="aboutPopup">
+        <button class="close-btn" id="closeAbout">×</button>
+        <div class="about-content">
+          <div class="about-photo-area">
+            <img src="assets/images/profile.jpg" alt="プロフィール写真" class="profile-photo">
+          </div>
+          <div class="about-text">
+            <h2>ABOUT</h2>
+
+            <p>
+              相愛大学音楽学部創作演奏専攻卒。学生時代より作曲活動を開始。<br>
+              神奈川を拠点に、コマーシャル、イベント音楽、ゲーム音楽をはじめ、アーティストへの楽曲提供や、
+              映像・空間・インスタレーションのための音楽制作を行っている。<br>
+              また子どもを対象とした作曲ワークショップやサウンドクリエーター体験のコンテンツ制作から実施までを手掛けている。
+            </p>
+
+            <p>
+              Based in Kanagawa, he writes for artists, including commercials, event music, and game music,
+              and produces music for video, spatial, and installation works.<br>
+              He also creates and runs composition workshops and sound creator experiences for children.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- フェード用オーバーレイ -->
+  <div class="fade-overlay"></div>
+
+  <!-- 共通JS -->
+  <script src="js/page-transition.js"></script>
+
+  <!-- ページ専用JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

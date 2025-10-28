@@ -1,0 +1,15 @@
+/* css/fade.css */
+.fade-overlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.fade-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}

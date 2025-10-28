@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+  overflow: hidden;
+  background-image: url('../assets/images/left-A.png');
+  background-position: center;
+
+}
+
+
+
+.hero {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* 左側 */
+.left-side {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: rgba(117, 73, 75, 0.304);
+
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  padding-left: 0%;
+}
+
+.overlay h1 {
+  color: #15a737;
+  font-size: 1.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.overlay p {
+  color: #707070;
+  margin-top: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.page-links a {
+  display: inline-block;      /* 幅・高さを自由にできるようにする */
+  padding: 0.2rem 0.5rem;       /* 上下左右の余白 */
+  text-decoration: none;
+  color: #707070;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 4px;         /* 任意で角丸 */
+}
+
+.page-links a:hover {
+  background-color: #15a73791;
+  color: #fff;
+
+}
+
+/* 左サイド内のフッター */
+.side-footer {
+  position: absolute;
+  bottom: 40px; /* 左サイド下からの距離 */
+  left: 25%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ffffff;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+}
+
+.side-footer .social-links {
+  margin-top: 6px;
+}
+
+.side-footer .social-links a {
+  color: #ccc;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.side-footer .social-links a:hover {
+  color: #fff;
+}
+
+
+
+/* 右側（WORKS）用 */
+.right-side {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: rgba(49, 49, 49, 0.577); /* 左側の背景色 */
+
+}
+
+/* 見出しと説明 */
+.right-side h2 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  text-align: center;
+  display: inline-block; /* テキストの幅に合わせる */
+  padding-bottom: 5px;
+
+ 
+}
+
+.about-popup {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 50%;         /* 右半分 */
+  height: 100%;
+  background: #4a81459f;
+  transition: right 1s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.about-popup.active {
+  right: 0;
+}
+
+/* 閉じるボタン */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* コンテンツ全体を縦並びに */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 👈 上寄せに変更 */
+  align-items: center;
+  height: 100%;
+  padding: 10px 40px; /* 上下の余白は個別に調整するため削除 */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* 写真エリア：右上部いっぱい */
+.about-photo-area {
+  width: 100%;
+  height: 40%;       /* 上部高さを40%に設定（調整可） */
+  overflow: hidden;
+  margin-top: 40px; 
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.8; /* ← 透明度（0.0～1.0）*/
+}
+
+/* テキスト部分：下60% */
+.about-text {
+  color: #ffffff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+   margin-top: 40px; /* 数値を増やすとさらに上に上がる */
+  max-width: 600px;
+
+}
+
+.about-text h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+
+}
+
+
+.about-text p {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 100;
+  margin: 0 0 15px 0;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto; /* ←これが重要 */
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+    height: auto; /* ←高さ固定を解除 */
+  }
+
+  .side-footer {
+    position: static; /* ←絶対位置を解除して自然配置に */
+    transform: none;
+    margin-top: 20px;
+    background: rgba(117, 73, 75, 0.304);
+  }
+
+  .overlay {
+    text-align: center; /* スマホでは中央揃え */
+    padding-left: 0;
+  }
+}
