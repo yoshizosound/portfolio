@@ -2,6 +2,9 @@ body {
   margin: 0;
   font-family: 'Roboto', 'Noto Sans JP', sans-serif;
   overflow: hidden;
+  background-image: url('../assets/images/left-A.png');
+  background-position: center;
+
 }
 
 
@@ -19,7 +22,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: rgba(80, 95, 80, 0.283);
+  background: rgba(117, 73, 75, 0.304);
 
 }
 
@@ -69,7 +72,7 @@ body {
   transform: translateX(-50%);
   text-align: center;
   font-size: 0.8rem;
-  color: #f6f6f6;
+  color: #ffffff;
   line-height: 1.6;
   letter-spacing: 0.08em;
   font-weight: 400;
